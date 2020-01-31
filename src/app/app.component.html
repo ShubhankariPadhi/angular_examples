@@ -1,0 +1,39 @@
+
+<div>
+
+<h2>angular Interpolation/ string interpolation</h2>
+ <p >{{title}}</p>
+  <p>{{firstvar+lastname}}</p>
+  <p>addition is {{number1+number2}}</p>
+
+
+  <h2>property binding</h2>
+  <img [src]="imgUrl" style="height: 200px;width: 200px;">
+
+
+
+  <h2>Event binding using form</h2>
+  <form >
+    username <input name="username" type="text">
+    <input (click)="addTwonumbers($event)"  type="submit" value="submit">
+  </form>
+</div>
+
+
+<h2>Event Bubbling Example</h2>
+<!-- Event Bubbling -->
+<div (click)="onDivClick()">
+  <button (click)="onSave($event)">Save</button>
+</div>
+
+
+<h2>two way binding</h2>
+<div>
+  <input [(ngModel)]="fullName"/>
+
+  <p>{{fullName}}</p>
+</div>
+
+
+<!--nesting one component within another component-->
+<app-employee></app-employee>
